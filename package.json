@@ -1,0 +1,30 @@
+{
+  "name": "@phoenixs/create-widget",
+  "version": "0.0.0",
+  "description": "@phoenixs/create-widget",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "pub": "npm publish"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "templates"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "create-widget": "bin/create-widget.js"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.18",
+    "@umijs/utils": "^3.5.20",
+    "tsc": "^2.0.4",
+    "typescript": "^4.5.5"
+  }
+}

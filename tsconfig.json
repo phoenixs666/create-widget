@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "target": "es5",
+    "outDir": "lib",
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["templates/**/*"]
+}
