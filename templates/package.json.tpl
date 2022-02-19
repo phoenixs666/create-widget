@@ -1,7 +1,11 @@
 {
-  "private": true,
-  "name": "{{{ packageName }}}",
-  "version": "0.0.0",
+  "name": "@phoenixs-widgets/{{{ packageName }}}",
+  "description": "组件描述...",
+  "version": "0.0.1",
+  "repository": {
+		"type": "git",
+		"url": ""
+	},
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -11,10 +15,10 @@
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "prepublishOnly": "npm run build"
+    "pub": "node publish/index.js"
   },
-  "module": "es/index.js",
-  "typings": "es/index.d.ts",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -26,9 +30,6 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "dependencies": {
-    "antd": "^4.18.6"
-  },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
@@ -36,6 +37,7 @@
     "@types/lodash": "^4.14.178",
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
+    "axios": "^0.26.0",
     "dumi": "^1.1.0",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
@@ -43,9 +45,15 @@
     "prettier": "^2.2.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-replace": "^2.2.0",
+    "shelljs": "^0.8.5",
     "yorkie": "^2.0.0"
   },
   "peerDependencies": {
-    "react": "^16.12.0 || ^17.0.0"
+    "react": "^16.12.0 || ^17.0.0",
+    "antd": "^4.18.6"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }

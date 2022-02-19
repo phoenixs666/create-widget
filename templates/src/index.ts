@@ -1,3 +1,3 @@
-import Foo from './Foo';
+import { default as widget } from './Foo';
 
-export default Foo;
+export { widget };
