@@ -1,3 +1,6 @@
+/**
+ * 组件配置
+ */
 module.exports = {
   server: 'http://localhost:3001',
   name: '组件名称',

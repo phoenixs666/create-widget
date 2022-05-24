@@ -1,4 +1,5 @@
 const config = require('../config');
+const schema = require('../config/schema');
 const axios = require('axios');
 const FormData = require('form-data');
 const fs = require('fs');
@@ -25,6 +26,7 @@ module.exports = async function () {
     desc: packageInfo.description,
     repository: packageInfo.repository.url,
     package: `https://www.npmjs.com/package/@phoenixs-widets/${key}`,
+    schema: JSON.stringify(schema),
     ...restConfig,
   };
   const formData = new FormData();
