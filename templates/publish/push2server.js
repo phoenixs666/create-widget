@@ -19,13 +19,13 @@ function createtOrUpdateWidget(formData, token) {
 }
 
 module.exports = async function () {
-  const key = packageInfo.name.split('/')[1];
+  const name = packageInfo.name.split('/')[1];
   const dto = {
-    key: key,
+    name: name,
     version: packageInfo.version,
     desc: packageInfo.description,
     repository: packageInfo.repository.url,
-    package: `https://www.npmjs.com/package/@phoenixs-widets/${key}`,
+    package: `https://www.npmjs.com/package/@phoenixs-widets/${name}`,
     schema: JSON.stringify(schema),
     ...restConfig,
   };
